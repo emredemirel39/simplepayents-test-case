@@ -12,7 +12,7 @@ export default {
   },
 
   computed: {
-    ...mapWritableState(useUserStore, ['userName', 'isLoggedIn', 'user'])
+    ...mapWritableState(useUserStore, ['isLoggedIn', 'user'])
   },
 
   beforeMount() {

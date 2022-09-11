@@ -7,7 +7,6 @@ export const useUserStore = defineStore('userStore', {
     //state
     state: () => ({
         isLoggedIn: false,
-        userName: 'Emre',
         user: null,
         errMessage: ''
 

@@ -50,7 +50,7 @@ export default {
     // },
 
     computed: {
-        ...mapWritableState(useUserStore, ['userName', 'user', 'errMessage', 'isLoggedIn']),
+        ...mapWritableState(useUserStore, ['user', 'errMessage', 'isLoggedIn']),
 
         form() {
             return ({

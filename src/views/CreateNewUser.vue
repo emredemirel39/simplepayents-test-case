@@ -13,7 +13,7 @@
             <div class="create-form__input-wrapper">
                 <div class="create-form__input-box">
                     <label>Почта</label>
-                    <input v-model="form.email" type="text">
+                    <input @input="clearErrMessage" v-model="form.email" type="text">
                 </div>
                 <p ref="mailErrRef">Неправильный адрес электронной почты, пример: example@example.com</p>
             </div>
@@ -57,22 +57,18 @@ export default {
  
         checkValidation() {
 
-            let isValid = false
+            let isValid = true
 
             if (this.form.name.match(nameRegex) === null) {
 
                 this.$refs.nameErrRef.style.opacity = 1;
                 isValid = false
-            } else {
-                isValid = true
             }
 
             if (this.form.email.match(emailRegex) === null) {
 
                 this.$refs.mailErrRef.style.opacity = 1;
                 isValid = false
-            } else {
-                isValid = true
             }
 
             return isValid;
